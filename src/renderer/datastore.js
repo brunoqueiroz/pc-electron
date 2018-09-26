@@ -16,13 +16,14 @@ sequelize
   .authenticate()
   .then(function(err) {
     console.log('Connection has been established successfully.');
-    //sequelize.sync(); //cria o banco
+    //sequelize.sync(); //cria o banco  
     User.create({username: 'brunooo', password:'password'}).then(function(){
       console.log('affff');
     });  
 
     setTimeout(function(){
      User.findAll().then(function(result) {
+      
         alert(result);
         });
     }, 1000);
