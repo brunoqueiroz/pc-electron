@@ -25,5 +25,6 @@ install:
 
 build_script:
   - yarn build
+  - ./node_modules/.bin/electron-builder build --win
 
 test: off
